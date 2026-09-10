@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Combined Layout")),
+        appBar: AppBar(title: const Text("Layout")),
 
         body: Column(
           children: [
             // Stack
             Stack(
               children: [
-                Image.network(
-                  "https://picsum.photos/400/200",
-                  width: 400,
-                  height: 200,
-                ),
-
-                Positioned(
+                Image.network("https://picsum.photos/400/200"),
+                const Positioned(
                   bottom: 10,
                   left: 10,
                   child: Text(
@@ -34,7 +31,7 @@ class MyApp extends StatelessWidget {
             ),
 
             // Column
-            Column(
+            const Column(
               children: [
                 Text("Welcome to MGIT"),
                 Text("UI Design using Flutter"),
@@ -42,7 +39,7 @@ class MyApp extends StatelessWidget {
             ),
 
             // Row
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [Icon(Icons.home), Icon(Icons.school), Text("Start")],
             ),

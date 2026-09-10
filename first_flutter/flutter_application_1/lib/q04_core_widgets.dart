@@ -15,10 +15,7 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Container(
             padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Colors.blue.shade100,
-              borderRadius: BorderRadius.circular(10),
-            ),
+            color: const Color.fromARGB(255, 146, 165, 181),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -26,12 +23,10 @@ class MyApp extends StatelessWidget {
                   'https://picsum.photos/200',
                   width: 200,
                   height: 150,
-                  fit: BoxFit.cover,
                 ),
-                const SizedBox(height: 15),
                 const Text(
                   'Welcome to Flutter!',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 24),
                 ),
               ],
             ),
